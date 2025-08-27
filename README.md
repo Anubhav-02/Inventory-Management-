@@ -19,9 +19,9 @@ It is **built using C# and .NET Core with a database (SQLite)**.
 ### 📥 Installation Guide (Step by Step)
 Follow these steps carefully (no coding knowledge required):
 **1. Install Required Tools**
-    - Install .NET 8 SDK (or latest) → [Download here] (https://dotnet.microsoft.com/en-us/download)
-    - Install Git (to download this project) → [Download here] (https://git-scm.com/downloads)
-    - Install Visual Studio Community (if you want to open the project in an editor) → [Download here] (https://visualstudio.microsoft.com/vs/community/)
+- Install .NET 8 SDK (or latest) → [Download here] (https://dotnet.microsoft.com/en-us/download)
+- Install Git (to download this project) → [Download here] (https://git-scm.com/downloads)
+- Install Visual Studio Community (if you want to open the project in an editor) → [Download here] (https://visualstudio.microsoft.com/vs/community/)
 
 **2. Download This Project**
 You can get the project in two ways:
