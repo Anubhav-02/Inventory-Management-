@@ -10,10 +10,11 @@ It is **built using C# and .NET Core with a database (SQLite)**.
 ⚠️ Check for low stock products (less than 5 items left)
 
 ### 🛠 What Technologies Are Used?
-C# → A programming language made by Microsoft.
-.NET Core → A free framework to build applications (the engine running this backend).
-SQLite → A small database saved as a file (used here to store products).
-Swagger → A tool that shows all available APIs in a simple webpage, so you can test them without coding.
+- C# → A programming language made by Microsoft.
+- .NET Core → A free framework to build applications (the engine running this backend).
+- SQLite → A small database saved as a file (used here to store products).
+- Poatman → A tool that shows all available APIs in a simple webpage, so you can test them without coding.
+- Swagger → A tool that shows all available APIs in a simple webpage, so you can test them without coding.
 
 ### 📥 Installation Guide (Step by Step)
 Follow these steps carefully (no coding knowledge required):
