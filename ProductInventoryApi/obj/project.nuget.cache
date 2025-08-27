@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tMcYBMzg+OU=",
+  "dgSpecHash": "GXOa3MDuKCg=",
   "success": true,
-  "projectFilePath": "D:\\Projects\\Invetory Managment\\ProductInventoryApi\\ProductInventoryApi.csproj",
+  "projectFilePath": "D:\\Projects\\Inventory-Management-\\ProductInventoryApi\\ProductInventoryApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\anubh\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.0\\microsoft.data.sqlite.core.8.0.0.nupkg.sha512",
     "C:\\Users\\anubh\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.0\\microsoft.entityframeworkcore.8.0.0.nupkg.sha512",

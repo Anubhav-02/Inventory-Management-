@@ -27,9 +27,8 @@ using (var scope = app.Services.CreateScope())
 app.UseSwagger();
 app.UseSwaggerUI();
 
-// IMPORTANT: disable HTTPS redirection for local dev to avoid redirect warnings
-// app.UseHttpsRedirection();
+app.UseHttpsRedirection(); // Redirect HTTP to HTTPS
 
-app.MapControllers();
+app.MapControllers();  // Map controller routes
 
 app.Run();

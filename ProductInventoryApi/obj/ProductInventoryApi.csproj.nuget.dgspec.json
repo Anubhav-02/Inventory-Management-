@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Invetory Managment\\ProductInventoryApi\\ProductInventoryApi.csproj": {}
+    "D:\\Projects\\Inventory-Management-\\ProductInventoryApi\\ProductInventoryApi.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Invetory Managment\\ProductInventoryApi\\ProductInventoryApi.csproj": {
+    "D:\\Projects\\Inventory-Management-\\ProductInventoryApi\\ProductInventoryApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Invetory Managment\\ProductInventoryApi\\ProductInventoryApi.csproj",
+        "projectUniqueName": "D:\\Projects\\Inventory-Management-\\ProductInventoryApi\\ProductInventoryApi.csproj",
         "projectName": "ProductInventoryApi",
-        "projectPath": "D:\\Projects\\Invetory Managment\\ProductInventoryApi\\ProductInventoryApi.csproj",
+        "projectPath": "D:\\Projects\\Inventory-Management-\\ProductInventoryApi\\ProductInventoryApi.csproj",
         "packagesPath": "C:\\Users\\anubh\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Invetory Managment\\ProductInventoryApi\\obj\\",
+        "outputPath": "D:\\Projects\\Inventory-Management-\\ProductInventoryApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
