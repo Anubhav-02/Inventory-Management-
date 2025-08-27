@@ -1,4 +1,4 @@
-📦 Product Inventory API (Backend Only)
+#📦 Product Inventory API (Backend Only)
 
 This project is a backend application (no user interface yet) that helps manage products in an Inventory System.
 It is built using C# and .NET Core with a lightweight database (SQLite).
