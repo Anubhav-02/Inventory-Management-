@@ -61,9 +61,11 @@ git clone https://github.com/Anubhav-02/Inventory-Management-.git
 
 ✅ This means your backend is running on **http://localhost:5000**
 
+---
+## Test API using Postman
 [Postman Collection URL](https://.postman.co/workspace/My-Workspace~9106ab3a-a3d7-4634-8f0d-d107dbaed5b7/request/42616923-e4a60cf9-e549-444e-a176-a4f54cf72a04?action=share&creator=42616923&ctx=documentation&active-environment=42616923-5c257926-88ba-411f-ae2f-d1886a17c557) 
 
-3. Just click any API, enter the values, and press **Execute**.  
+Just click any API, enter the values, and press **Execute**.  
 
 💡 Example:  
 - To add a product → Click **POST /api/products**, then fill details like `Name`, `Price`, `Category` → Execute → ✅ Done!  
@@ -76,20 +78,6 @@ git clone https://github.com/Anubhav-02/Inventory-Management-.git
 - You don’t need to install anything extra. It’s already included.  
 - If you delete `products.db`, a new one will be created automatically.  
 
----
-
-## ❓ FAQ (For Non-Coders)
-
-**Q: What is .NET?**  
-A free framework by Microsoft that lets us build apps (like the engine that runs this project).  
-
-**Q: Do I need to code anything?**  
-No. You just need to run commands like `dotnet run`. Swagger will give you buttons to click.  
-
-**Q: Where do I see my products?**  
-Right now, only in **Swagger** or **Postman** (API testing tools). A separate frontend (website) can be built later.  
-
----
 
 ## 👨‍💻 Author
 Made by **Anubhav Kushwaha**
