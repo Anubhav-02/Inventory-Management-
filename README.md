@@ -8,8 +8,8 @@ You can use this backend to:
 - 📋 View all products  
 - 🔍 Search & filter products  
 - ✏️ Update product details  
-- ❌ Delete products
-- ⚠️ Check for **low stock products** (less than or equal to 5 items left)  
+- ❌ Delete products (soft delete)  
+- ⚠️ Check for **low stock products** (less than 5 items left)  
 
 ---
 
@@ -18,7 +18,7 @@ You can use this backend to:
 - **C#** → A programming language made by Microsoft.  
 - **.NET Core** → A free framework to build applications (the engine running this backend).  
 - **SQLite** → A small database saved as a file (used here to store products).  
-- **Postman** → A tool that shows all available APIs in a simple webpage, so you can test them without coding.  
+- **Swagger** → A tool that shows all available APIs in a simple webpage, so you can test them without coding.  
 
 ---
 
@@ -69,9 +69,12 @@ git clone https://github.com/Anubhav-02/Inventory-Management-.git
 
 ---
 
-## 🌐 Collection of APIs (Postman) 
-[Postamn Collection URL](https://.postman.co/workspace/My-Workspace~9106ab3a-a3d7-4634-8f0d-d107dbaed5b7/request/42616923-e4a60cf9-e549-444e-a176-a4f54cf72a04?action=share&creator=42616923&ctx=documentation&active-environment=42616923-5c257926-88ba-411f-ae2f-d1886a17c557)
-You will see a webpage with the following APIs:  
+## 🌐 Using the API (No Coding Needed)
+
+1. Open your browser and go to:  
+   👉 [http://localhost:5000/swagger](http://localhost:5000/swagger)  
+
+2. You will see a webpage with the following APIs:  
    - **POST /api/products** → Add a new product  
    - **GET /api/products** → View all products  
    - **GET /api/products/{id}** → View product by ID  
