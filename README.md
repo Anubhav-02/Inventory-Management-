@@ -8,24 +8,21 @@ You can use this backend to:
 - 📋 View all products  
 - 🔍 Search & filter products  
 - ✏️ Update product details  
-- ❌ Delete products (soft delete)  
+- ❌ Delete products 
 - ⚠️ Check for **low stock products** (less than 5 items left)  
 
 ---
 
 ## 🛠 What Technologies Are Used?
-
 - **C#** → A programming language made by Microsoft.  
 - **.NET Core** → A free framework to build applications (the engine running this backend).  
 - **SQLite** → A small database saved as a file (used here to store products).  
-- **Swagger** → A tool that shows all available APIs in a simple webpage, so you can test them without coding.  
+- **Postman** → A tool that shows all available APIs in a simple webpage, so you can test them without coding.  
 
 ---
 
 ## 📥 Installation Guide (Step by Step)
-
 Follow these steps carefully (**no coding knowledge required**):
-
 ### 1. Install Required Tools
 - Install **.NET 8 SDK (or latest)** → [Download here](https://dotnet.microsoft.com/en-us/download)  
 - Install **Git** (to download this project) → [Download here](https://git-scm.com/downloads)  
@@ -34,9 +31,7 @@ Follow these steps carefully (**no coding knowledge required**):
 ---
 
 ### 2. Download This Project
-
 You can get the project in two ways:  
-
 **Option A: Download ZIP**  
 - Click the green **Code** button on GitHub → "Download ZIP"  
 - Extract the ZIP file  
@@ -49,7 +44,6 @@ git clone https://github.com/Anubhav-02/Inventory-Management-.git
 ---
 
 ## ▶️ Running the Backend
-
 1. Open a terminal (**Command Prompt** or **PowerShell**).  
 2. Navigate to the project folder (where `ProductInventoryApi.csproj` exists). Example:  
    ```bash
@@ -67,20 +61,7 @@ git clone https://github.com/Anubhav-02/Inventory-Management-.git
 
 ✅ This means your backend is running on **http://localhost:5000**
 
----
-
-## 🌐 Using the API (No Coding Needed)
-
-1. Open your browser and go to:  
-   👉 [http://localhost:5000/swagger](http://localhost:5000/swagger)  
-
-2. You will see a webpage with the following APIs:  
-   - **POST /api/products** → Add a new product  
-   - **GET /api/products** → View all products  
-   - **GET /api/products/{id}** → View product by ID  
-   - **PUT /api/products/{id}** → Update a product  
-   - **DELETE /api/products/{id}** → Soft delete (mark inactive)  
-   - **GET /api/products/lowstock** → Check products with stock < 5  
+[Postamn Collection URL](https://.postman.co/workspace/My-Workspace~9106ab3a-a3d7-4634-8f0d-d107dbaed5b7/request/42616923-e4a60cf9-e549-444e-a176-a4f54cf72a04?action=share&creator=42616923&ctx=documentation&active-environment=42616923-5c257926-88ba-411f-ae2f-d1886a17c557) 
 
 3. Just click any API, enter the values, and press **Execute**.  
 
