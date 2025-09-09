@@ -1,163 +1,579 @@
 {
-  "info": {
-    "name": "ProductInventoryApi",
-    "_postman_id": "9f4f0d7a-0d1b-4c3f-9a2a-a1c9ac3b7f2f",
-    "description": "Product Inventory REST API collection",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-  },
-  "item": [
-    {
-      "name": "Create Product",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"name\": \"Pencil\",\n  \"description\": \"HB wooden pencil\",\n  \"price\": 10.5,\n  \"stockQuantity\": 100,\n  \"category\": \"Stationery\"\n}"
-        },
-        "url": {
-          "raw": "{{baseUrl}}/api/products",
-          "host": [
-            "{{baseUrl}}"
-          ],
-          "path": [
-            "api",
-            "products"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Get All Products (filters + sort + pagination)",
-      "request": {
-        "method": "GET",
-        "url": {
-          "raw": "{{baseUrl}}/api/products?category=Stationery&sort=price_desc&page=1&pageSize=5",
-          "host": [
-            "{{baseUrl}}"
-          ],
-          "path": [
-            "api",
-            "products"
-          ],
-          "query": [
-            {
-              "key": "category",
-              "value": "Stationery"
-            },
-            {
-              "key": "sort",
-              "value": "price_desc"
-            },
-            {
-              "key": "page",
-              "value": "1"
-            },
-            {
-              "key": "pageSize",
-              "value": "5"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Search + Low Stock",
-      "request": {
-        "method": "GET",
-        "url": {
-          "raw": "{{baseUrl}}/api/products?search=pencil&lowStock=true",
-          "host": [
-            "{{baseUrl}}"
-          ],
-          "path": [
-            "api",
-            "products"
-          ],
-          "query": [
-            {
-              "key": "search",
-              "value": "pencil"
-            },
-            {
-              "key": "lowStock",
-              "value": "true"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Get Product by ID",
-      "request": {
-        "method": "GET",
-        "url": {
-          "raw": "{{baseUrl}}/api/products/1",
-          "host": [
-            "{{baseUrl}}"
-          ],
-          "path": [
-            "api",
-            "products",
-            "1"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Update Product (partial)",
-      "request": {
-        "method": "PUT",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"price\": 12.0,\n  \"stockQuantity\": 80\n}"
-        },
-        "url": {
-          "raw": "{{baseUrl}}/api/products/1",
-          "host": [
-            "{{baseUrl}}"
-          ],
-          "path": [
-            "api",
-            "products",
-            "1"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Soft Delete Product",
-      "request": {
-        "method": "DELETE",
-        "url": {
-          "raw": "{{baseUrl}}/api/products/1",
-          "host": [
-            "{{baseUrl}}"
-          ],
-          "path": [
-            "api",
-            "products",
-            "1"
-          ]
-        }
-      }
-    }
-  ],
-  "variable": [
-    {
-      "key": "baseUrl",
-      "value": "http://localhost:5000"
-    }
-  ]
+	"info": {
+		"_postman_id": "eedc9d62-f784-4584-8258-24afc305e07f",
+		"name": "ProductInventoryApi",
+		"description": "Product Inventory REST API collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42616923"
+	},
+	"item": [
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Pencil\",\n  \"description\": \"HB wooden pencil\",\n  \"price\": 10.5,\n  \"stockQuantity\": 100,\n  \"category\": \"Stationery\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/products",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Eraser\",\n  \"description\": \"Green Color\",\n  \"price\": \"20\",\n  \"stockQuantity\": 30,\n  \"category\": \"Stationery\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 Sep 2025 11:57:51 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Location",
+							"value": "http://localhost:5000/api/Products/12"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 12,\n    \"name\": \"Eraser\",\n    \"description\": \"Green Color\",\n    \"price\": 20,\n    \"stockQuantity\": 30,\n    \"category\": \"Stationery\",\n    \"isActive\": true\n}"
+				},
+				{
+					"name": "Create Product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Ruler\",\n  \"description\": \"15cm\",\n  \"price\": \"10\",\n  \"stockQuantity\": 20,\n  \"category\": \"Stationery\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 Sep 2025 12:16:14 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Location",
+							"value": "http://localhost:5000/api/Products/13"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Product added successfully!\",\n    \"data\": {\n        \"id\": 13,\n        \"name\": \"Ruler\",\n        \"description\": \"15cm\",\n        \"price\": 10,\n        \"stockQuantity\": 20,\n        \"category\": \"Stationery\",\n        \"isActive\": true\n    }\n}"
+				},
+				{
+					"name": "Create Product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Science 10th\",\n  \"description\": \"Book NCERT\",\n  \"price\": 400,\n  \"stockQuantity\": 2,\n  \"category\": \"Stationery\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 Sep 2025 17:25:24 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Location",
+							"value": "http://localhost:5000/api/Products/14"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Product added successfully!\",\n    \"data\": {\n        \"id\": 14,\n        \"name\": \"Science 10th\",\n        \"description\": \"Book NCERT\",\n        \"price\": 400,\n        \"stockQuantity\": 2,\n        \"category\": \"Stationery\",\n        \"isActive\": true\n    }\n}"
+				},
+				{
+					"name": "Create Product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Maths 10th\",\n  \"description\": \"Book NCERT\",\n  \"price\": -1,\n  \"stockQuantity\": 7,\n  \"category\": \"\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 Sep 2025 18:37:06 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": \"Validation failed. Please correct the errors.\",\n    \"errors\": [\n        {\n            \"field\": \"Price\",\n            \"errors\": [\n                \"Price must be between 0 and 1,000,000.\"\n            ]\n        },\n        {\n            \"field\": \"Category\",\n            \"errors\": [\n                \"Category is required.\"\n            ]\n        }\n    ]\n}"
+				},
+				{
+					"name": "Create Product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Dell G15\",\n  \"description\": \"Laptop\",\n  \"price\": 59000,\n  \"stockQuantity\": 12,\n  \"category\": \"Electronics\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 Sep 2025 19:41:05 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Location",
+							"value": "http://localhost:5000/api/Products/17"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Product added successfully.\",\n    \"product\": {\n        \"id\": 17,\n        \"name\": \"Dell G15\",\n        \"description\": \"Laptop\",\n        \"price\": 59000,\n        \"stockQuantity\": 12,\n        \"category\": \"Electronics\",\n        \"isActive\": true\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Products (filters + sort + pagination)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/products?category=Stationery&sort=price_desc&page=1&pageSize=5",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Stationery"
+						},
+						{
+							"key": "sort",
+							"value": "price_desc"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Products (filters + sort + pagination)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "T-Shirt",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "price_desc",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "pageSize",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 Sep 2025 18:38:54 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "X-Total-Count",
+							"value": "9"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Pencil\",\n        \"description\": \"HB wooden pencil\",\n        \"price\": 11,\n        \"stockQuantity\": 90,\n        \"category\": \"Stationery\",\n        \"isActive\": true\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Amul Milk\",\n        \"description\": \"\",\n        \"price\": 25,\n        \"stockQuantity\": 15,\n        \"category\": \"Dairy\",\n        \"isActive\": true\n    },\n    {\n        \"id\": 4,\n        \"name\": \"HP Mouse Wireless\",\n        \"description\": \"\",\n        \"price\": 11,\n        \"stockQuantity\": 2,\n        \"category\": \"Electronics\",\n        \"isActive\": true\n    },\n    {\n        \"id\": 5,\n        \"name\": \"DNMX T-Shirt\",\n        \"description\": \"Black Color\",\n        \"price\": 499,\n        \"stockQuantity\": 50,\n        \"category\": \"Clothes\",\n        \"isActive\": true\n    },\n    {\n        \"id\": 9,\n        \"name\": \"Spykar T-Shirt\",\n        \"description\": \"Green Color\",\n        \"price\": 1499,\n        \"stockQuantity\": 2,\n        \"category\": \"Clothes\",\n        \"isActive\": true\n    },\n    {\n        \"id\": 11,\n        \"name\": \" T-Shirt\",\n        \"description\": \"Green Color\",\n        \"price\": 1299,\n        \"stockQuantity\": 30,\n        \"category\": \"Clothes\",\n        \"isActive\": true\n    },\n    {\n        \"id\": 12,\n        \"name\": \"Eraser\",\n        \"description\": \"Green Color\",\n        \"price\": 20,\n        \"stockQuantity\": 30,\n        \"category\": \"Stationery\",\n        \"isActive\": true\n    },\n    {\n        \"id\": 13,\n        \"name\": \"Ruler\",\n        \"description\": \"15cm\",\n        \"price\": 10,\n        \"stockQuantity\": 20,\n        \"category\": \"Stationery\",\n        \"isActive\": true\n    },\n    {\n        \"id\": 16,\n        \"name\": \"Maths 10th\",\n        \"description\": \"Book NCERT\",\n        \"price\": 400,\n        \"stockQuantity\": 7,\n        \"category\": \"Stationery\",\n        \"isActive\": true\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Low Stock",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/products?search=pencil&lowStock=true",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "pencil"
+						},
+						{
+							"key": "lowStock",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/products/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product (partial)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"price\": 12.0,\n  \"stockQuantity\": 80\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/products/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Product (partial)",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"stockQuantity\": 5\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/products/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 Sep 2025 19:22:49 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Product updated successfully.\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Pencil\",\n        \"description\": \"HB wooden pencil\",\n        \"price\": 11,\n        \"stockQuantity\": 5,\n        \"category\": \"Stationery\",\n        \"isActive\": true\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Hard Delete by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/products/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Soft delete by search term",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/products/search?search=laptop",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"search"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "laptop"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:5000"
+		}
+	]
 }

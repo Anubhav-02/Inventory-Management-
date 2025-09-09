@@ -1,19 +1,46 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProductInventoryApi.Data;
+using ProductInventoryApi.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// --- DB (SQLite) ---
+// DB (SQLite)
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// --- Controllers ---
+// Controllers
 builder.Services.AddControllers();
 
-// --- Swagger (always on) ---
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+// Custom Validation Error Response
+builder.Services.Configure<ApiBehaviorOptions>(options =>
+{
+    options.InvalidModelStateResponseFactory = context =>
+    {
+        var errors = context.ModelState
+            .Where(e => e.Value?.Errors.Count > 0)
+            .Select(e => new
+            {
+                Errors = e.Value!.Errors.Select(err =>
+                    string.IsNullOrWhiteSpace(err.ErrorMessage)
+                        ? "Invalid input."
+                        : err.ErrorMessage
+                ).ToArray()
+            });
 
+        var response = new
+        {
+            success = false,
+            message = "Validation failed. Please correct the errors.",
+            errors
+        };
+
+        return new BadRequestObjectResult(response);
+    };
+});
+
+
+// Build and run the app
 var app = builder.Build();
 
 // Ensure DB exists
@@ -23,12 +50,9 @@ using (var scope = app.Services.CreateScope())
     db.Database.EnsureCreated();
 }
 
-// Swagger UI (enabled regardless of environment)
-app.UseSwagger();
-app.UseSwaggerUI();
+app.UseHttpsRedirection();
 
-app.UseHttpsRedirection(); // Redirect HTTP to HTTPS
+app.UseMiddleware<ErrorHandlingMiddleware>(); // global error handler
 
-app.MapControllers();  // Map controller routes
-
+app.MapControllers();
 app.Run();
