@@ -63,7 +63,7 @@ git clone https://github.com/Anubhav-02/Inventory-Management-.git
 
 ---
 ## Test API using Postman
-[Postman Collection URL]([https://.postman.co/workspace/My-Workspace~9106ab3a-a3d7-4634-8f0d-d107dbaed5b7/request/42616923-e4a60cf9-e549-444e-a176-a4f54cf72a04?action=share&creator=42616923&ctx=documentation&active-environment=42616923-5c257926-88ba-411f-ae2f-d1886a17c557](https://.postman.co/workspace/My-Workspace~9106ab3a-a3d7-4634-8f0d-d107dbaed5b7/request/42616923-e4a60cf9-e549-444e-a176-a4f54cf72a04?action=share&creator=42616923&ctx=documentation&active-environment=42616923-5c257926-88ba-411f-ae2f-d1886a17c557)) 
+[Postman Collection URL](https://.postman.co/workspace/My-Workspace~9106ab3a-a3d7-4634-8f0d-d107dbaed5b7/collection/42616923-eedc9d62-f784-4584-8258-24afc305e07f?action=share&creator=42616923&active-environment=42616923-5c257926-88ba-411f-ae2f-d1886a17c557) 
 
 Just click any API, enter the values, and press **Execute**.  
 
